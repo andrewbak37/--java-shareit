@@ -23,8 +23,6 @@ public class BookingController {
         return bookingService.bookItem(bookingDto, userId);
     }
 
-
-    // /bookings/5?approved=true
     @PatchMapping("/{bookingId}")
     public BookingInfoDto approveBooking(@RequestHeader("X-Sharer-User-Id") Long userId,
                                          @PathVariable Long bookingId,
